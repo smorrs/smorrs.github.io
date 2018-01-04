@@ -30,7 +30,7 @@ body {
     margin-left: -100px; /* half the width */
     width: 200px; 
     height: 200px;
-    background:url(/img/logo.svg) center center no-repeat;
+    background:url(img/logo.svg) center center no-repeat;
     -webkit-animation: pulse 3s infinite ease-in-out;
     -o-animation: pulse 3s infinite ease-in-out;
     -ms-animation: pulse 3s infinite ease-in-out; 
