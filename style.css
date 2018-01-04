@@ -1,3 +1,5 @@
+/* main */
+
 body {
         background: url(https://images.unsplash.com/photo-1475483768296-6163e08872a1?auto=format&fit=crop&w=3300&q=80) no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -15,3 +17,35 @@ body {
   h1 {
     color: #F9F1DB;
   }
+
+
+
+/* styles */
+
+.logo { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px; /* half the height */
+    margin-left: -100px; /* half the width */
+    width: 200px; 
+    height: 200px;
+    background:url(img/logo.svg) center center no-repeat;
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out; 
+    -moz-animation: pulse 3s infinite ease-in-out; 
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.97); opacity: 0.8; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.97); opacity: 0.8; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.97); opacity: 0.8; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.97); opacity: 0.8; }
+}
