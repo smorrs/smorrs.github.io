@@ -26,7 +26,7 @@ github_username:  smorrs
 
 # Build settings
 markdown: kramdown
-theme: marshmallow
+theme: minima
 plugins:
   - jekyll-feed
 
