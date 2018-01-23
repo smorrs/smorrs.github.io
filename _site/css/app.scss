@@ -36,15 +36,30 @@ $snapchat: #fffc00 !default;
 $pinterest:	#cb2027 !default;
 $google: #dd4b39 !default;
 
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
 
 body {
 	margin: 0;
 	background-color: $midnightnavy;
+	display: flex;
+
+	.container {
+		display: flex;
+
+		justify-content: center;
+		max-width: 1080px;
+		margin: 0 auto;
+		flex-direction: column;
+	}
 }
 
 
 #intro {
 	min-height: 280px;
+	width: 100%;
 		h1 {
 			color: $vanilla;
 			font-family: "youngserifregular";
@@ -84,4 +99,28 @@ body {
 		font-size: 24px;
 		font-variant-ligatures: historical-ligatures;
 	}
+}
+
+section {
+  display: flex;
+}
+
+.column {
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+
+}
+
+section:nth-of-type(5) .column:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 22px;
+}
+
+section:nth-of-type(6) .column:nth-of-type(2) {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 66px;
 }
