@@ -46,7 +46,6 @@ body {
 	background-color: $midnightnavy;
 	display: flex;
 
-<<<<<<< HEAD
 	.container {
 		display: flex;
 
@@ -56,9 +55,26 @@ body {
 		flex-direction: column;
 	}
 }
-=======
->>>>>>> parent of 0b1010a... site push
 
+.header-bar {
+	margin-bottom: 90px;
+	.hire-us {
+			a {
+				height: 40px;
+				font-family: YoungSerif;
+				font-style: normal;
+				font-weight: 100;
+				line-height: normal;
+				font-size: 15px;
+				border: 2px solid rgba(242, 153, 74, 0.4);
+				border-radius: 4px;
+				text-decoration: none;
+				color: #FFFFFF;
+				padding: 8px 10px 9px;
+			span {color: $tangerine;}
+			}
+	}
+}
 
 #intro {
 	min-height: 280px;
