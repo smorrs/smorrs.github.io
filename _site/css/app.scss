@@ -23,7 +23,8 @@ $papabear: 1140px;
 $monsterbear: 1300px;
 
 $font-size: 16px;
-$font-family: Helvetica, sans-serif;
+$sans-font-family: 'GlacialIndifferenceRegular', 'Gotham', 'Helvetica', sans-serif;
+$serif-font-family: 'youngserifregular', Georgia, serif;
 $alt-font-family: monospace;
 $font-color: #353535;
 
@@ -39,6 +40,7 @@ $google: #dd4b39 !default;
 html, body {
   height: 100%;
   box-sizing: border-box;
+  font-family: $serif-font-family;
 }
 
 body {
@@ -48,12 +50,42 @@ body {
 
 	.container {
 		display: flex;
-
 		justify-content: center;
 		max-width: 1080px;
 		margin: 0 auto;
 		flex-direction: column;
 	}
+  .mamabear {
+    width: 740px;
+    padding: 20px;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    .contact-form {
+      padding-left: 40px;
+      h5 {
+        font-family: $sans-font-family;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 14px;
+        font-size: 14px;
+        color: #AFB0BE;
+        display: block;
+        margin-bottom: 5px;
+      }
+      hr {
+        width: 40px;
+        border-color: #E0E0E0;
+        border-style: solid;
+        display: inline-block;
+      }
+      h1 {
+        color: $midnightnavy;
+        margin-top: 5px;
+      }
+    }
+  }
 }
 
 .header-bar {
@@ -61,7 +93,7 @@ body {
 	.hire-us {
 		padding-top: 5px;
 			a {
-				font-family: YoungSerif;
+				font-family: $serif-font-family;
 				font-style: normal;
 				font-weight: 100;
 				line-height: normal;
@@ -90,7 +122,7 @@ body {
 	width: 100%;
 		h1 {
 			color: $vanilla;
-			font-family: "youngserifregular";
+			font-family: $serif-font-family;
 			font-size: 64px;
 			font-weight: 600;
 			line-height: 70px;
@@ -98,7 +130,7 @@ body {
 		}
 		h4 {
 			color: $vanilla;
-			font-family: 'GlacialIndifferenceRegular';
+			font-family: $sans-font-family;
 			font-size: 24px;
 			font-weight: normal;
 			font-style: normal;
@@ -113,7 +145,7 @@ body {
 			h5 { color: #f2f2f2; margin: 0;}
 			p {
 				color: $cloudy;
-				font-family: "youngserifregular";
+				font-family: $serif-font-family;
 				font-size: 14px;
 				font-weight: normal;
 				font-style: normal;
@@ -123,7 +155,7 @@ body {
 	}
 	.list-title {
 		color: #f2f2f2;
-		font-family: "youngserifregular";
+		font-family: $serif-font-family;
 		font-size: 24px;
 		font-variant-ligatures: historical-ligatures;
 	}
