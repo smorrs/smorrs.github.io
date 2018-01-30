@@ -7,49 +7,65 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 <!-- fulltitle: This overrides the default page title, which is "{{page.tite}} | {{site.title}}" -->
 <!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
 
-<div class="mamabear">
+<input class="button" type="checkbox" name="toggle" id="toggle" />
+<label for="toggle"></label>
+
+<div class="mamabear inquiry-form">
   <div class="contact-form">
     <h5>Contact Us</h5>
     <hr/>
     <h1>Let's Work Together</h1>
-  <form>
-    <ul class="flex-outer">
-      <li>
-        <label for="full-name">Full Name</label>
-        <input type="text" id="full-name" placeholder="Name">
-      </li>
-      <li>
-        <label for="company">Company</label>
-        <input type="text" id="company" placeholder="Company">
-      </li>
-      <li>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Email">
-      </li>
-      <li>
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Phone Number">
-      </li>
-      <li>
-        <label for="timeline">Timeline</label>
-        <input type="date" id="timeline" placeholder="Timeline">
-      </li>
-      <li>
-        <label for="budget">Budget</label>
-        <input type="text" id="budget" placeholder="Budget">
-      </li>
-      <li>
-        <label for="project-details">Project Details</label>
-        <textarea rows="6" id="message" placeholder="Project Details"></textarea>
-      </li>
-    </ul>
-  </form>
+    <!-- Start Inquiry Form -->
+    <form>
+      <ul class="flex-container">
+        <section class="flex-row">
+          <li class="flex-col-lg-6">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" placeholder="Name">
+          </li>
+          <li class="flex-col-lg-6">
+            <label for="company">Company</label>
+            <input type="text" name="company" id="company" placeholder="Company">
+          </li>
+        </section>
+
+        <section class="flex-row">
+          <li class="flex-col-lg-6">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+          </li>
+          <li class="flex-col-lg-6">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+          </li>
+        </section>
+
+        <section class="flex-row">
+          <li class="flex-col-lg-6">
+            <label for="timeline">Timeline</label>
+            <input type="date" name="timeline" id="timeline" placeholder="Timeline">
+          </li>
+          <li class="flex-col-lg-6">
+            <label for="budget">Budget</label>
+            <input type="text" name="budget" id="budget" placeholder="Budget">
+          </li>
+        </section>
+
+        <section class="flex-row">
+          <li class="flex-col-lg-12">
+            <label for="project-details">Project Details</label>
+            <textarea rows="6" id="message" placeholder="Project Details"></textarea>
+          </li>
+        </section>
+      </ul>
+      <a href="#" class="button alt-button">Submit <span>+</span></a>
+    </form>
   </div>
 </div>
 
-<div class="container">
-  <section class="header-bar">
-    <div class="column logo">
+<div class="container flex-container">
+  <div class="flex-row header-bar">
+    <div class="flex-col-lg-6 logo">
       <svg width="152" height="47" viewBox="0 0 152 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Smorrs Logo</title>
         <desc>The Smorrs Main Logo</desc>
@@ -90,36 +106,36 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
       </svg>
     </div>
 
-    <div class="column hire-us">
-      <a href="#">work with us <span>+</span></a>
+    <div class="flex-col-lg-6 hire-us">
     </div>
-  </section>
+  </div>
 
-  <section id="intro">
-      <div class="column">
-        <h1>We kindle the flame, <br> you light the world on fire.</h1>
-        <h4>We’re a nomadic product design studio specializing in creating empowering brands and creative solutions for small companies and individuals.</h4>
+  <div class="flex-row">
+    <div class="section" id="intro">
+        <div class="flex-col-lg-12">
+          <h1>We kindle the flame, <br> you light the world on fire.</h1>
+          <h4>We’re a nomadic product design studio specializing in creating empowering brands and creative solutions for small companies and individuals.</h4>
+      </div>
     </div>
-  </section>
+  </div>
+  <div class="flex-row">
+      <div class="flex-col-lg-6 list">
+        <h3 class="list-title">Projects</h3>
+        <ul>
+          <li>
+            <h5>De Wae Gourmet</h5>
+            <p>Web Design, Branding, & Marketing</p>
+          </li>
+          <li>
+            <h5>Fenomenal Inc.</h5>
+            <p>Video Advertising</p>
+          </li>
+        </ul>
+      </div>
 
-  <section>
-    <div class="column list">
-      <h3 class="list-title">Projects</h3>
-      <ul>
-        <li>
-          <h5>De Wae Gourmet</h5>
-          <p>Web Design, Branding, & Marketing</p>
-        </li>
-        <li>
-          <h5>Fenomenal Inc.</h5>
-          <p>Video Advertising</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="column list">
-      <h3 class="list-title">Articles</h3>
-    </div>
-  </section
+      <div class="flex-col-lg-6 list">
+        <h3 class="list-title">Articles</h3>
+      </div>
+  </div>
 
 </div>

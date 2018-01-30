@@ -4,7 +4,6 @@ None of these variable are being imported anywhere, they're just here for your c
 *******
 */
 
-
 // Some Style Variables
 $primary-color: #36465f;
 $secondary-color: #464646;
@@ -22,6 +21,98 @@ $mamabear: 769px;
 $papabear: 1140px;
 $monsterbear: 1300px;
 
+// Bear Grid
+
+$device-xs: 540px;
+$device-sm: 768px;
+$device-md: 992px;
+$device-lg: 1200px;
+
+.flex-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  @media (min-width: $device-xs) {
+    max-width: $device-xs;
+  }
+
+  @media (min-width: $device-sm) {
+    max-width: $device-sm;
+  }
+
+  @media (min-width: $device-md) {
+    max-width: $device-md;
+  }
+
+  @media (min-width: $device-lg) {
+    max-width: $device-lg;
+  }
+}
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.flex-row--align-v-center {
+  align-items: center;
+}
+
+.flex-row--align-v-bottom {
+  align-items: flex-end;
+}
+
+.flex-row--align-h-center {
+  justify-content: center;
+}
+
+.flex-row--align-h-right {
+  justify-content: flex-end;
+}
+
+.flex-row--reverse {
+  flex-direction: row-reverse;
+}
+
+@for $i from 1 through 12 {
+  .flex-col-xs-#{$i},
+  .flex-col-sm-#{$i},
+  .flex-col-md-#{$i},
+  .flex-col-lg-#{$i} {
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .flex-col-xs-#{$i} {
+    @media (min-width: $device-xs) {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+
+  .flex-col-sm-#{$i} {
+    @media (min-width: $device-sm) {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+
+  .flex-col-md-#{$i} {
+    @media (min-width: $device-md) {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+
+  .flex-col-lg-#{$i} {
+    @media (min-width: $device-lg) {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+
+// Font Stylings
 $font-size: 16px;
 $sans-font-family: 'GlacialIndifferenceRegular', 'Gotham', 'Helvetica', sans-serif;
 $serif-font-family: 'youngserifregular', Georgia, serif;
@@ -47,23 +138,17 @@ body {
 	margin: 0;
 	background-color: $midnightnavy;
 	display: flex;
+  overflow: hidden;
 
 	.container {
-		display: flex;
-		justify-content: center;
-		max-width: 1080px;
 		margin: 0 auto;
+		max-width: 1080px;
+    padding: 40px 40px 0;
 		flex-direction: column;
 	}
   .mamabear {
-    width: 740px;
-    padding: 20px;
-    height: 100%;
-    background: #ffffff;
-    position: absolute;
-    right: 0;
     .contact-form {
-      padding-left: 40px;
+      padding: 0 20px;
       h5 {
         font-family: $sans-font-family;
         font-style: normal;
@@ -84,19 +169,8 @@ body {
         color: $midnightnavy;
         margin-top: 5px;
       }
-      .flex-outer {
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .flex-outer li {
-        width: 47%;
-        margin: 40px 10px;
-      }
-      .flex-outer li:last-child {
-        width: 100%;
+      form {
+        ul {padding: 0; list-style-type: none;  }
       }
       label {
         font-family: $sans-font-family;
@@ -128,32 +202,38 @@ body {
   }
 }
 
-.header-bar {
+.button {
+  font-family: $serif-font-family;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  font-size: 15px;
+  border: 2px solid $vanilla;
+  border-radius: 4px;
+  text-decoration: none;
+  color: $tangerine;
+  background: $vanilla;
+  padding: 8px 10px 10px;
+  align-self: center;
+   span {color: $midnightnavy;}
+  }
+  .button:hover {
+    color: $tangerine;
+    border-color: #f2f2f2;
+    background: $midnightnavy;
+    span {color: $vanilla;}
+  }
+  .alt-button {
+    background: $midnightnavy;
+    color: $vanilla;
+    border: 0;
+    span {color: $tangerine;}
+  }
+
+  .header-bar {
 	margin-bottom: 90px;
 	.hire-us {
 		padding-top: 5px;
-			a {
-				font-family: $serif-font-family;
-				font-style: normal;
-				font-weight: 100;
-				line-height: normal;
-				font-size: 15px;
-				border: 2px solid $vanilla;
-				border-radius: 4px;
-				text-decoration: none;
-				color: $tangerine;
-				background: $vanilla;
-				padding: 8px 10px 10px;
-				float: right;
-				align-self: center;
-			span {color: $midnightnavy;}
-			}
-			:hover {
-				color: $tangerine;
-				border-color: #f2f2f2;
-				background: $midnightnavy;
-				span {color: $vanilla;}
-			}
 	}
 }
 
@@ -201,26 +281,69 @@ body {
 	}
 }
 
-section {
+.section {
   display: flex;
 }
 
-.column {
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+// Toggle Panel Mechanism
 
+.inquiry-form {
+  position: absolute;
+  right: -780px;
+  top: 0;
+  width: 740px;
+  padding: 20px;
+  height: 100%;
+  background: #ffffff;
 }
 
-section:nth-of-type(5) .column:first-of-type {
-  flex-grow: 2;
-  flex-shrink: 2;
-  flex-basis: 22px;
+#toggle {
+  position:absolute;
+  appearance:none;
+  cursor:pointer;
+  left:-100%;
+  top:-100%;
 }
 
-section:nth-of-type(6) .column:nth-of-type(2) {
-  flex-grow: 4;
-  flex-shrink: 4;
-  flex-basis: 66px;
+#toggle + label {
+  position:absolute;
+  cursor:pointer;
+  padding:10px;
+  background: #26ae90;
+width: 100px;
+border-radius: 3px;
+padding: 8px 10px;
+color: #FFF;
+line-height:20px;
+font-size:12px;
+text-align:center;
+-webkit-font-smoothing: antialiased;
+cursor: pointer;
+  margin:20px 50px;
+  transition:all 500ms ease;
+}
+#toggle + label:after {
+  content:"Open"
+}
+
+.container {
+transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  padding:5em 3em;
+  display: flex;
+}
+
+#toggle:checked ~ .inquiry-form {
+  right: 0;
+}
+
+#toggle:checked ~ .container {
+  margin-right: 740px;
+}
+
+#toggle:checked + label {
+  background:#dd6149;
+}
+
+#toggle:checked + label:after {
+  content:"Close"
 }
