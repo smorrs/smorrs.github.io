@@ -7,12 +7,10 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 <!-- fulltitle: This overrides the default page title, which is "{{page.tite}} | {{site.title}}" -->
 <!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
 
-<input type="checkbox" name="toggle" id="toggle" />
-<label for="toggle"></label>
-
-<div id="inquiry-form" class="mamabear">
+<div class="mamabear cf-panel inquiry-form from-right">
   <div class="contact-form">
     <h5>Contact Us</h5>
+    <a href="#0" class="cf-panel-close">Close</a>
     <hr/>
     <h1>Let's Work Together</h1>
     <!-- Start Inquiry Form -->
@@ -63,9 +61,9 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
   </div>
 </div>
 
-<div class="container">
-  <div class="section header-bar">
-    <div class="column logo">
+<div class="container flex-container">
+  <div class="flex-row header-bar">
+    <div class="flex-col-lg-6 logo">
       <svg width="152" height="47" viewBox="0 0 152 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Smorrs Logo</title>
         <desc>The Smorrs Main Logo</desc>
@@ -106,36 +104,37 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
       </svg>
     </div>
 
-    <div class="column hire-us">
-      <a class="button" href="#">work with us <span>+</span></a>
+    <div class="flex-col-lg-6 hire-us">
+      <a class="button cf-btn" href="#0">work with us&nbsp;<span>+</span></a>
     </div>
   </div>
 
-  <div class="section" id="intro">
-      <div class="column">
-        <h1>We kindle the flame, <br> you light the world on fire.</h1>
-        <h4>We’re a nomadic product design studio specializing in creating empowering brands and creative solutions for small companies and individuals.</h4>
+  <div class="flex-row">
+    <div class="section" id="intro">
+        <div class="flex-col-lg-12">
+          <h1>We kindle the flame, <br> you light the world on fire.</h1>
+          <h4>We’re a nomadic product design studio specializing in creating empowering brands and creative solutions for small companies and individuals.</h4>
+      </div>
     </div>
   </div>
+  <div class="flex-row">
+      <div class="flex-col-lg-6 list">
+        <h3 class="list-title">Projects</h3>
+        <ul>
+          <li>
+            <h5>De Wae Gourmet</h5>
+            <p>Web Design, Branding, & Marketing</p>
+          </li>
+          <li>
+            <h5>Fenomenal Inc.</h5>
+            <p>Video Advertising</p>
+          </li>
+        </ul>
+      </div>
 
-  <div class="section">
-    <div class="column list">
-      <h3 class="list-title">Projects</h3>
-      <ul>
-        <li>
-          <h5>De Wae Gourmet</h5>
-          <p>Web Design, Branding, & Marketing</p>
-        </li>
-        <li>
-          <h5>Fenomenal Inc.</h5>
-          <p>Video Advertising</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="column list">
-      <h3 class="list-title">Articles</h3>
-    </div>
+      <div class="flex-col-lg-6 list">
+        <h3 class="list-title">Articles</h3>
+      </div>
   </div>
 
 </div>

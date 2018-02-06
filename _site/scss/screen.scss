@@ -1,0 +1,184 @@
+/* This is hell
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "../bourbon/bourbon"; // Bourbon has some mixins or whatever...
+@import "compass"; // Compass processes my scss, and adds a few useful things.
+@import "../partials/variables"; // Colors, Fonts, etc...
+@import "../partials/mixins"; // Custom Mixins
+@import "../partials/layout"; // Responsive Grid and Media Queries
+
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+
+body {
+	margin: 0;
+	background-color: $midnightnavy;
+	display: flex;
+  overflow: hidden;
+
+	.container {
+		margin: 0 auto;
+		max-width: 1080px;
+    padding: 40px 40px 0;
+		flex-direction: column;
+	}
+  .mamabear {
+    .contact-form {
+      padding: 0 40px;
+      .cf-panel-close {
+        text-decoration: none;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+      }
+      h5 {
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 14px;
+        font-size: 14px;
+        color: #AFB0BE;
+        display: block;
+        margin-bottom: 5px;
+      }
+      hr {
+        width: 40px;
+        border-color: #E0E0E0;
+        border-style: solid;
+        display: inline-block;
+      }
+      h1 {
+        color: $midnightnavy;
+        margin-top: 5px;
+      }
+      form {
+        ul {padding: 0; list-style-type: none;  }
+      }
+      label {
+        font-family: $secondary-font;
+        font-size: 12px;
+        color: #AFB0BE;
+        margin: 10px 0;
+      }
+      input, textarea {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        background: none;
+        outline: none;
+        resize: none;
+        border: 0;
+        transition: all .3s;
+        border-bottom: 2px solid #EDEEF9;
+        font-family: $primary-font;
+        font-size: 16px;
+        color: $midnightnavy;
+      }
+      input:focus, textarea:focus {
+        border-bottom: 2px solid #78788c;
+      }
+      ::placeholder {
+        color: #D9D9D9;
+      }
+    }
+  }
+}
+
+.inquiry-form {
+  right: 0;
+  top: 0;
+  width: 740px;
+  height: 100%;
+  background: #ffffff;
+}
+
+.button {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  font-size: 15px;
+  border: 2px solid $vanilla;
+  border-radius: 4px;
+  text-decoration: none;
+  color: $tangerine;
+  background: $vanilla;
+  padding: 8px 10px 10px;
+
+  display: inline-flex;
+   span {color: $midnightnavy;}
+  }
+  .button:hover {
+    color: $tangerine;
+    border-color: #f2f2f2;
+    background: $midnightnavy;
+    span {color: $vanilla;}
+  }
+  .alt-button {
+    background: $midnightnavy;
+    color: $vanilla;
+    border: 0;
+    span {color: $tangerine;}
+  }
+
+  .header-bar {
+	margin-bottom: 90px;
+	.hire-us {
+        align-items: center;
+        flex-direction: row-reverse;
+        display: flex;
+	}
+}
+
+#intro {
+	min-height: 280px;
+	width: 100%;
+		h1 {
+			color: $vanilla;
+			font-family: $primary-font;
+			font-size: 64px;
+			font-weight: 600;
+			line-height: 70px;
+			margin: 0;
+		}
+		h4 {
+			color: $vanilla;
+			font-family: $secondary-font;
+			font-size: 24px;
+			font-weight: normal;
+			font-style: normal;
+		}
+}
+
+.list {
+	ul {
+    padding-left: 20px;
+		li {
+			color: $tangerine;
+			h5 { color: #f2f2f2; margin: 0;}
+			p {
+				color: $cloudy;
+				font-family: $primary-font;
+				font-size: 14px;
+				font-weight: normal;
+				font-style: normal;
+				margin: 10px auto 30px;
+			}
+		}
+	}
+	.list-title {
+		color: #f2f2f2;
+		font-family: $primary-font;
+		font-size: 24px;
+		font-variant-ligatures: historical-ligatures;
+	}
+}
+
+.section {
+  display: flex;
+}

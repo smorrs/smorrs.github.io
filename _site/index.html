@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html>
 <!--<![endif]-->
 
 <head>
@@ -24,10 +24,10 @@
 	<meta name="twitter:url" content="http://localhost:4000/">
 
 	<!-- CSS & fonts -->
-	<link rel="stylesheet" href="css/app.min.css">
-	
+	<link rel="stylesheet" href="css/screen.css">
+
 	<link rel="stylesheet" href="css/webfonts/fontface.css">
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+	<link rel="stylesheet" media="screen, projection" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
 	<!-- Put your fonts here -->
 
 </head>
@@ -41,14 +41,14 @@
 		<!-- fulltitle: This overrides the default page title, which is " | Smorrs Co. | Product Design Studio" -->
 <!-- excerpt: If this isn't set, it'll pull your  for meta description-->
 
-<input class="button" type="checkbox" name="toggle" id="toggle" />
-<label for="toggle"></label>
-
-<div class="mamabear inquiry-form">
+<div class="mamabear inquiry-form" id="form-panel">
   <div class="contact-form">
+
     <h5>Contact Us</h5>
+    <a href="#0" class="cf-panel-close"><img src="img/close.svg"/></a>
     <hr/>
     <h1>Let's Work Together</h1>
+    
     <!-- Start Inquiry Form -->
     <form>
       <ul class="flex-container">
@@ -141,6 +141,7 @@
     </div>
 
     <div class="flex-col-lg-6 hire-us">
+      <a class="button cf-btn" href="#0">work with us&nbsp;<span>+</span></a>
     </div>
   </div>
 
@@ -174,6 +175,11 @@
 
 </div>
 
+
+<!-- Loading in some scripts here -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/scotchPanels.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 
 	</body>
 </html>
