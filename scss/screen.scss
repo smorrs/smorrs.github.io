@@ -15,9 +15,14 @@ html, body {
   font-family: $primary-font;
 }
 
+html {
+  background:  url('../img/flicker-bg.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
 body {
 	margin: 0;
-	background-color: $midnightnavy;
+	background-color: rgba(51, 52, 73, 0.90);
 	display: flex;
   overflow: hidden;
 

@@ -534,31 +534,37 @@ html, body {
 }
 
 /* line 18, ../scss/screen.scss */
+html {
+  background: url("../img/flicker-bg.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* line 23, ../scss/screen.scss */
 body {
   margin: 0;
-  background-color: #333449;
+  background-color: rgba(51, 52, 73, 0.9);
   display: flex;
   overflow: hidden;
 }
-/* line 24, ../scss/screen.scss */
+/* line 29, ../scss/screen.scss */
 body .container {
   margin: 0 auto;
   max-width: 1080px;
   padding: 40px 40px 0;
   flex-direction: column;
 }
-/* line 31, ../scss/screen.scss */
+/* line 36, ../scss/screen.scss */
 body .mamabear .contact-form {
   padding: 0 40px;
 }
-/* line 33, ../scss/screen.scss */
+/* line 38, ../scss/screen.scss */
 body .mamabear .contact-form .cf-panel-close {
   text-decoration: none;
   position: absolute;
   right: 40px;
   top: 20px;
 }
-/* line 39, ../scss/screen.scss */
+/* line 44, ../scss/screen.scss */
 body .mamabear .contact-form h5 {
   font-family: "GlacialIndifferenceRegular", "Gotham", "Helvetica", sans-serif;
   font-style: normal;
@@ -569,31 +575,31 @@ body .mamabear .contact-form h5 {
   display: block;
   margin-bottom: 5px;
 }
-/* line 49, ../scss/screen.scss */
+/* line 54, ../scss/screen.scss */
 body .mamabear .contact-form hr {
   width: 40px;
   border-color: #E0E0E0;
   border-style: solid;
   display: inline-block;
 }
-/* line 55, ../scss/screen.scss */
+/* line 60, ../scss/screen.scss */
 body .mamabear .contact-form h1 {
   color: #333449;
   margin-top: 5px;
 }
-/* line 60, ../scss/screen.scss */
+/* line 65, ../scss/screen.scss */
 body .mamabear .contact-form form ul {
   padding: 0;
   list-style-type: none;
 }
-/* line 62, ../scss/screen.scss */
+/* line 67, ../scss/screen.scss */
 body .mamabear .contact-form label {
   font-family: "GlacialIndifferenceRegular", "Gotham", "Helvetica", sans-serif;
   font-size: 12px;
   color: #AFB0BE;
   margin: 10px 0;
 }
-/* line 68, ../scss/screen.scss */
+/* line 73, ../scss/screen.scss */
 body .mamabear .contact-form input, body .mamabear .contact-form textarea {
   padding: 10px;
   width: 100%;
@@ -608,16 +614,16 @@ body .mamabear .contact-form input, body .mamabear .contact-form textarea {
   font-size: 16px;
   color: #333449;
 }
-/* line 82, ../scss/screen.scss */
+/* line 87, ../scss/screen.scss */
 body .mamabear .contact-form input:focus, body .mamabear .contact-form textarea:focus {
   border-bottom: 2px solid #78788c;
 }
-/* line 85, ../scss/screen.scss */
+/* line 90, ../scss/screen.scss */
 body .mamabear .contact-form ::placeholder {
   color: #D9D9D9;
 }
 
-/* line 92, ../scss/screen.scss */
+/* line 97, ../scss/screen.scss */
 .inquiry-form {
   right: 0;
   top: 0;
@@ -626,7 +632,7 @@ body .mamabear .contact-form ::placeholder {
   background: #ffffff;
 }
 
-/* line 100, ../scss/screen.scss */
+/* line 105, ../scss/screen.scss */
 .button {
   font-family: "youngserifregular", Georgia, serif;
   font-style: normal;
@@ -641,50 +647,50 @@ body .mamabear .contact-form ::placeholder {
   padding: 8px 10px 10px;
   display: inline-flex;
 }
-/* line 114, ../scss/screen.scss */
+/* line 119, ../scss/screen.scss */
 .button span {
   color: #333449;
 }
 
-/* line 116, ../scss/screen.scss */
+/* line 121, ../scss/screen.scss */
 .button:hover {
   color: #EE9468;
   border-color: #f2f2f2;
   background: #333449;
 }
-/* line 120, ../scss/screen.scss */
+/* line 125, ../scss/screen.scss */
 .button:hover span {
   color: #FAEDD1;
 }
 
-/* line 122, ../scss/screen.scss */
+/* line 127, ../scss/screen.scss */
 .alt-button {
   background: #333449;
   color: #FAEDD1;
   border: 0;
 }
-/* line 126, ../scss/screen.scss */
+/* line 131, ../scss/screen.scss */
 .alt-button span {
   color: #EE9468;
 }
 
-/* line 129, ../scss/screen.scss */
+/* line 134, ../scss/screen.scss */
 .header-bar {
   margin-bottom: 90px;
 }
-/* line 131, ../scss/screen.scss */
+/* line 136, ../scss/screen.scss */
 .header-bar .hire-us {
   align-items: center;
   flex-direction: row-reverse;
   display: flex;
 }
 
-/* line 138, ../scss/screen.scss */
+/* line 143, ../scss/screen.scss */
 #intro {
   min-height: 280px;
   width: 100%;
 }
-/* line 141, ../scss/screen.scss */
+/* line 146, ../scss/screen.scss */
 #intro h1 {
   color: #FAEDD1;
   font-family: "youngserifregular", Georgia, serif;
@@ -693,7 +699,7 @@ body .mamabear .contact-form ::placeholder {
   line-height: 70px;
   margin: 0;
 }
-/* line 149, ../scss/screen.scss */
+/* line 154, ../scss/screen.scss */
 #intro h4 {
   color: #FAEDD1;
   font-family: "GlacialIndifferenceRegular", "Gotham", "Helvetica", sans-serif;
@@ -702,20 +708,20 @@ body .mamabear .contact-form ::placeholder {
   font-style: normal;
 }
 
-/* line 159, ../scss/screen.scss */
+/* line 164, ../scss/screen.scss */
 .list ul {
   padding-left: 20px;
 }
-/* line 161, ../scss/screen.scss */
+/* line 166, ../scss/screen.scss */
 .list ul li {
   color: #EE9468;
 }
-/* line 163, ../scss/screen.scss */
+/* line 168, ../scss/screen.scss */
 .list ul li h5 {
   color: #f2f2f2;
   margin: 0;
 }
-/* line 164, ../scss/screen.scss */
+/* line 169, ../scss/screen.scss */
 .list ul li p {
   color: #BDBDBD;
   font-family: "youngserifregular", Georgia, serif;
@@ -724,7 +730,7 @@ body .mamabear .contact-form ::placeholder {
   font-style: normal;
   margin: 10px auto 30px;
 }
-/* line 174, ../scss/screen.scss */
+/* line 179, ../scss/screen.scss */
 .list .list-title {
   color: #f2f2f2;
   font-family: "youngserifregular", Georgia, serif;
@@ -732,7 +738,7 @@ body .mamabear .contact-form ::placeholder {
   font-variant-ligatures: historical-ligatures;
 }
 
-/* line 182, ../scss/screen.scss */
+/* line 187, ../scss/screen.scss */
 .section {
   display: flex;
 }
