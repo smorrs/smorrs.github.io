@@ -134,7 +134,14 @@ h5 {
   margin: 0 4px;
   display: inline-block;
 }
-.social ul li a { color: #575866; }
+.social ul li a {
+  color: #575866;
+  -ms-interpolation-mode: bicubic;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .social ul li.twitter a:hover { color: #1FA4F0; }
 .social ul li.dribbble a:hover { color: #E54C86; }
 
@@ -151,6 +158,7 @@ h5 {
 
   ul.work li:before {
       content: '- ';
+      color: #EE9468;
       margin-right: 10px;
       display: inline-block;
     }
