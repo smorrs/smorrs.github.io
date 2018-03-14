@@ -67,6 +67,23 @@ h5 {
   height: 85px;
   width: 55px;
   margin: 0 0 50px 0;
+  -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out;
+    -moz-animation: pulse 3s infinite ease-in-out;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.95); opacity: 0.8; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.95); opacity: 0.8; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
 }
 
 .description {
@@ -76,6 +93,11 @@ h5 {
   .description h5, .description h5 a {
     color: #FAEDD1;
     text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
     .description h5 a:hover { opacity: .7; }
   .description h5 span {
@@ -141,21 +163,21 @@ h5 {
       content: '';
       position: absolute;
       width: 0%;
-      height: 2px;
+      height: 4px;
       top: 50%;
       margin-top: -0.5px;
-      background: #fff;
+      background: #EE9468;
     }
     ul.work li span:before {
       left: -2.5px;
     }
     ul.work li span:after {
       right: 2.5px;
-      background: #fff;
+      background: #EE9468;
       transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     ul.work li span:hover:before {
-      background: #fff;
+      background: #EE9468;
       width: 100%;
       transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
@@ -172,10 +194,16 @@ h5 {
     display: inline-block;
   }
   ul.work li .extra {
-    display: none;
+    opacity: 0;
+    display: inline-block;
     color: #575866;
     font-size: .8em;
     text-transform: uppercase;
+    -ms-interpolation-mode: bicubic;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
     ul.work li .extra:before {
       content: ' // ';
@@ -183,5 +211,5 @@ h5 {
       margin: 0 10px;
     }
   ul.work li:hover .extra {
-    display: inline-block;
+    opacity: 100;
   }
