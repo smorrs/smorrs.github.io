@@ -1,8 +1,6 @@
 /* styles for smorrs.com */
 
 html, body {
-  height: 100%;
-  box-sizing: border-box;
   font-family: 'Glacial Indifference', sans-serif;
 }
 
@@ -53,12 +51,10 @@ h5 {
 /* site styles */
 
 .container {
-  width: 60%;
-  margin: 0 auto 50px auto;
-  top: 20%;
-  position: absolute;
-  left: 0;
-  right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
 }
 
 .logo {
